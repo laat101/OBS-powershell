@@ -110,7 +110,7 @@
 			ProjectUri = 'https://github.com/laat101/OBS-powershell'
 			
 			# A URL to an icon representing this module.
-			IconUri = 'https://github.com/laat101/OBS-powershell/Icon.png?raw=true'
+			IconUri = 'https://raw.githubusercontent.com/laat101/OBS-powershell/main/Icon.png'
 			
 			# ReleaseNotes of this module
 			# ReleaseNotes = ''
