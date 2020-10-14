@@ -30,10 +30,10 @@ This is a Powershell Gallery module: https://www.powershellgallery.com/packages/
     Start-obsScene -SceneName "Intro"
 
 # This example makes the source 'Logo' visible in scene 'Intro'. Input is case sensitive!
-    Show-obsSource -Scene Intro -Name Logo -Show $true
+    Show-obsSource -SceneName Intro -SourceName Logo -Show $true
 
 # This example makes the source 'Logo' unvisible in scene 'Intro'. Input is case sensitive!
-    Show-obsSource -Scene Intro -Name Logo -Show $false
+    Show-obsSource -SceneName Intro -SourceName Logo -Show $false
 
 # Output to your primary monitor
     Start-obsMonitor -Monitor 1
