@@ -1,14 +1,16 @@
 # OBS Studio poweshell module
-Module to control OBS via powershell. This module uses OBS websocket (thanks to Stéphane Lepin Palakis) Make sure you install OBS-websocket plugin in OBS. Check this url: https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/
+Module to control OBS via powershell. This module uses OBS websocket (thanks to Stéphane Lepin Palakis) Make sure you install OBS-websocket plugin in OBS. 
+
+Check this url: https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/
 CAUTION: At this time it's not possible to use credentials to connect to OBS websocket.
 
-# Functions
+## Functions
  - Connect-obs
  - Disconnect-obs
  - Start-obsScene
  - Show-obsSource
 
-# Examples
+## Examples
 ```powershell
 # Connect to OBS Studio
     Connect-obs -ip 127.0.0.1 -port 4444
@@ -34,8 +36,8 @@ CAUTION: At this time it's not possible to use credentials to connect to OBS web
     Start-sleep 5
 ```
 
-# ToDo
+## ToDo
 I try to expand this module with some nice new features soon.
 
-# Know Issues
+## Know Issues
 - OBS Websocket password protection is not posssible. This maybe due to powershell. Investigating. 
