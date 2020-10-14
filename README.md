@@ -10,6 +10,14 @@ CAUTION: At this time it's not possible to use credentials to connect to OBS web
  - Start-obsScene
  - Show-obsSource
 
+## Installation
+This is a Powershell Gallery module: https://www.powershellgallery.com/packages/OBS
+```powershell
+    Install-Module -Name OBS
+    Import-Module OBS
+```
+
+
 ## Examples
 ```powershell
 # Connect to OBS Studio
@@ -26,6 +34,9 @@ CAUTION: At this time it's not possible to use credentials to connect to OBS web
 
 # This example makes the source 'Logo' unvisible in scene 'Intro'. Input is case sensitive!
     Show-obsSource -Scene Intro -Name Logo -Show $false
+
+# Output to your primary monitor
+    Start-obsMonitor -Monitor 1
 
 # Use sleep to move through the scenes
     Start-obsScene -SceneName "Scene 1"

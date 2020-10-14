@@ -15,7 +15,7 @@
 @{
 	
 	# Script module or binary module file associated with this manifest
-	ModuleToProcess = 'OBS.psm1'
+	RootModule = 'OBS.psm1'
 	
 	# Version number of this module.
     ModuleVersion = '0.1'
@@ -77,7 +77,7 @@
 	# NestedModules = @()
 	
 	# Functions to export from this module
-	FunctionsToExport = 'Connect-obs', 'Disconnect-obs', 'Start-obsScene', 'Show-obsSource'
+	FunctionsToExport = 'Connect-obs', 'Disconnect-obs', 'Start-obsScene', 'Show-obsSource', 'Start-obsMonitor'
 	
 	# Cmdlets to export from this module
 	CmdletsToExport = '*' 

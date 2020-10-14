@@ -20,12 +20,18 @@ function Connect-obs {
         $port="4444"
     )
     $global:message_id = 0
+    
     $URL = 'ws://{0}:{1}/' -f $ip, $port
     $global:WS = New-Object System.Net.WebSockets.ClientWebSocket                                                
     $global:CT = New-Object System.Threading.CancellationToken
     $global:Conn = $WS.ConnectAsync($URL, $CT)
     While (!$Conn.IsCompleted) { 
         # Connecting
-    }
-    Write-Warning "It's not possible to use a OBS websocket password. Inputs are case sensitive!"
+        }
+    
+    if($WS.State -eq "Closed"){
+        throw "Unable to connect to OBS."
+    } else {
+        Write-Warning "OBS Connected. It's not possible to use a OBS websocket password. Inputs are case sensitive!"
+    }    
 }
